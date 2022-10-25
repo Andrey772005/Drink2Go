@@ -1,13 +1,44 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
     <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Интернет-магазин кофейных напитков">
+    <meta name="keywords" content="Напитки, кофе в алюминиевых банках">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
-    <header class="header">Шапка</header>
+    <header class="page__header">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <a class="header__logo" href="#">
+          <img class="page-header--logo" src="./img/logo.svg" alt="Логотип Drink2Go">
+        </a>
+        <a class="header__link" href="#">
+          <img class="page-header--link" src="./img/user.svg" width="16" height="16" alt="">
+        </a>
+        <a class="header__link" href="#">
+          <img class="page-header--link" src="./img/basket.svg" width="16" height="16" alt="">
+        </a>
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a href="catalog.html">Доставка</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html">Каталог</a>
+            </li>
+            <li class="site-list__item">
+              <a href="about.html">О нас</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
     <script src="./js/script.js" defer></script>
   </body>

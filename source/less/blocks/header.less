@@ -1,5 +1,258 @@
-.header {
-  background-color: #663399;
+.page__header {
+  background-color: @white;
   color: #ffffff;
-  padding: 10px 15px;
+  outline: 2px solid rgb(255, 0, 0);
+  outline-offset: -2px;
+}
+
+.header__logo {
+  display: inline-block;
+  padding-top: 12px;
+  padding-left: 20px;
+}
+
+.header__link {
+  display: inline-block;
+  text-align: center;
+  width: 16px;
+  height: 16px;
+}
+
+.main-nav {
+  position: relative;
+  width: auto;
+  height: 60px;
+  background-color: @white;
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    background-color: @white;
+  }
+}
+
+/* Меню */
+
+.main-nav__list {
+  position: relative;
+  min-height: 56px;
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  color: @white;
+  mix-blend-mode: normal;
+  margin: auto;
+  padding: 0;
+  z-index: 1;
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin-top: -80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -81px;
+  }
+}
+
+/* Ссылки */
+
+.site-list a {
+  position: relative;
+  display: block;
+  padding: 12px 21px;
+  padding-bottom: 13px;
+  font-size: 12px;
+  line-height: 16px;
+  color: @white;
+  text-decoration: none;
+  background-color: @lightblue;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    font-family: "PT Sans", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
+    color: @black;
+    background-color: @white;
+    padding: 0;
+  }
+}
+
+.site-list__item:first-child {
+  @media (min-width: @tablet-width) {
+    margin-left: 3%;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 2%;
+  }
+}
+
+.site-list__item:nth-child(2) {
+  @media (min-width: @tablet-width) {
+    margin-left: 3%;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 2%;
+  }
+}
+
+.site-list__item:nth-child(3) {
+  @media (min-width: @tablet-width) {
+    margin-left: 21%;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 20.5%;
+  }
+}
+
+.site-list__item:nth-child(2) a,
+.site-list__item:nth-child(3) a,
+.site-list__item:nth-child(4) a {
+  /* stylelint-disable-next-line length-zero-no-unit */
+  box-shadow: 0px -1px 0px rgba(1, 1, 1, 0.2), inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+
+  @media (min-width: @tablet-width) {
+    box-shadow: none;
+  }
+}
+
+.site-list__item:nth-child(4) a {
+  background-color: linear-gradient(180deg, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.site-list__item:hover {
+  background-color: @link-hover;
+}
+
+.site-list__item:active {
+  background-color: #5496bd;
+}
+
+/* Гамбургер */
+
+.main-nav__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 60px;
+  height: 50px;
+  background-color: @white;
+  cursor: pointer;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+/* Закрытое меню */
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 27px;
+  left: 17px;
+  width: 18px;
+  height: 2px;
+  background-color: @baseblack;
+  box-shadow: 0 6px 0 0 @baseblack, 0 12px 0 0 @baseblack;
+
+  &:hover {
+    background-color: @button-hover;
+  }
+
+  &:active {
+    background-color: @button-active;
+  }
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: @button-active;
+  box-shadow:
+    0 8px 0 0 @button-active,
+    0 16px 0 0 @button-active;
+
+  &:hover {
+    background-color: @button-hover;
+  }
+
+  &:active {
+    background-color: @button-active;
+  }
+}
+
+@media (max-width: @tablet-width) {
+  .main-nav--closed .site-list__item {
+    display: none;
+  }
+}
+
+/* Открытое меню */
+
+.main-nav--opened .main-nav__toggle {
+  top: 0;
+  right: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 15px;
+    width: 26px;
+    height: 4px;
+    background-color: @lightblue;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: @button-active;
+  }
+}
+
+/* No JS */
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__wrapper {
+  position: static;
+  min-height: 0;
+}
+
+.main-nav--nojs .site-list__item {
+  display: block;
+}
+
+.main-nav--nojs .user-list__item {
+  display: block;
+  background-color: @lightblue;
 }
