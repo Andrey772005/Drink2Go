@@ -15,9 +15,9 @@ navToggle.addEventListener('click', function() {
   }
 });
 
-// const swiper = new Swiper(".mySwiper", {
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-// });
+const swiper = new Swiper(".mySwiper", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
