@@ -1,3 +1,10 @@
+/* stylelint-disable CssSyntaxError */
+/* stylelint-disable length-zero-no-unit */
+/* stylelint-disable indentation */
+/* stylelint-disable font-family-name-quotes */
+/* stylelint-disable declaration-no-important */
+/* stylelint-disable selector-pseudo-element-colon-notation */
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
 /* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable property-no-vendor-prefix */
 /* stylelint-disable string-quotes */
@@ -186,7 +193,7 @@
   height: var(--swiper-virtual-size);
 }
 :root {
-  --swiper-navigation-size: 44px;
+  --swiper-navigation-size: 20px;
   /*
   --swiper-navigation-color: var(--swiper-theme-color);
   */
@@ -232,7 +239,7 @@
 }
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
-  left: 10px;
+  left: 5px;
   right: auto;
 }
 .swiper-button-prev::after,
@@ -241,7 +248,7 @@
 }
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
-  right: 10px;
+  right: 5px;
   left: auto;
 }
 .swiper-button-next:after,
@@ -319,7 +326,7 @@
   height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px));
   display: inline-block;
   border-radius: 50%;
-  background: var(--swiper-pagination-bullet-inactive-color, #000);
+  background: var(--swiper-pagination-bullet-inactive-color, #000000);
   opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
 }
 button.swiper-pagination-bullet {
@@ -482,10 +489,10 @@ button.swiper-pagination-bullet {
 }
 /* Preloader */
 :root {
-  /*
+
   --swiper-preloader-color: var(--swiper-theme-color);
-  */
 }
+
 .swiper-lazy-preloader {
   width: 42px;
   height: 42px;
@@ -506,11 +513,12 @@ button.swiper-pagination-bullet {
   animation: swiper-preloader-spin 1s infinite linear;
 }
 .swiper-lazy-preloader-white {
-  --swiper-preloader-color: #fff;
+  --swiper-preloader-color: #ffffff;
 }
 .swiper-lazy-preloader-black {
-  --swiper-preloader-color: #000;
+  --swiper-preloader-color: #000000;
 }
+
 @keyframes swiper-preloader-spin {
   0% {
     transform: rotate(0deg);
@@ -602,7 +610,7 @@ button.swiper-pagination-bullet {
 }
 .swiper-cube .swiper-cube-shadow:before {
   content: '';
-  background: #000;
+  background: #000000;
   position: absolute;
   left: 0;
   top: 0;
