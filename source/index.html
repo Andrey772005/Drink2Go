@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="Интернет-магазин кофейных напитков">
     <meta name="keywords" content="Напитки, кофе в алюминиевых банках">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
@@ -43,18 +46,51 @@
         <div class="swiper-slide">
           <section class="product__slider">
             <picture>
-              <source media="(min-width: 1200px)" srcset="img/slider-image1-3x.png">
-              <source media="(min-width: 768px)" srcset="img/slider-image1-2x.png">
-              <img class="product__slider-promo--image" src="img/slider-image1-1x.png" alt="">
+              <source media="(min-width: 1200px)" srcset="img/slider-image1-desktop-1x.webp 1x, img/slider-image1-desktop-2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="img/slider-image1-tablet-1x.webp 1x, img/slider-image1-tablet-2x.webp 2x">
+              <img class="product__slider-promo--image" src="img/slider-image1-1x.webp" srcset="img/slider-image1-2x.webp 2x" alt="Банка кофе">
             </picture>
-            <span class="product__slider--new">Новинка</span>
+            <span class="product__slider--new">Новинка!</span>
             <h1 class="product__slider--header">Декаф Флэт Уайт</h1>
             <p class="product__slider--text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
-            
+            <div class="product__slider-buy">
+              <span class="product__slider-new--price"><del class="product__slider-old--price">295&#8381;</del>225&#8381;</span>
+              <a class="product__slider-buy--button" role="button" href="#">Заказать</a>
+            </div>
           </section>
         </div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">
+          <section class="product__slider">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/slider-image1-desktop-1x.webp 1x, img/slider-image1-desktop-2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="img/slider-image1-tablet-1x.webp 1x, img/slider-image1-tablet-2x.webp 2x">
+              <img class="product__slider-promo--image" src="img/slider-image1-1x.webp" srcset="img/slider-image1-2x.webp 2x" alt="Банка кофе">
+            </picture>
+            <span class="product__slider--new">Новинка!</span>
+            <h1 class="product__slider--header">Декаф Флэт Уайт</h1>
+            <p class="product__slider--text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+            <div class="product__slider-buy">
+              <span class="product__slider-new--price"><del class="product__slider-old--price">295&#8381;</del>225&#8381;</span>
+              <a class="product__slider-buy--button" role="button" href="#">Заказать</a>
+            </div>
+          </section>
+        </div>
+        <div class="swiper-slide">
+          <section class="product__slider">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/slider-image1-desktop-1x.webp 1x, img/slider-image1-desktop-2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="img/slider-image1-tablet-1x.webp 1x, img/slider-image1-tablet-2x.webp 2x">
+              <img class="product__slider-promo--image" src="img/slider-image1-1x.webp" srcset="img/slider-image1-2x.webp 2x" alt="Банка кофе">
+            </picture>
+            <span class="product__slider--new">Новинка!</span>
+            <h1 class="product__slider--header">Декаф Флэт Уайт</h1>
+            <p class="product__slider--text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+            <div class="product__slider-buy">
+              <span class="product__slider-new--price"><del class="product__slider-old--price">295&#8381;</del>225&#8381;</span>
+              <a class="product__slider-buy--button" role="button" href="#">Заказать</a>
+            </div>
+          </section>
+        </div>
       </div>
       <!-- If we need navigation buttons -->
       <div class="swiper-button-prev"></div>
